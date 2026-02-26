@@ -1,0 +1,38 @@
+weight = 4.8 #pounds
+
+#Ground Shipping
+if weight <= 2:
+  Gcost = 20 + 1.5*weight
+elif weight > 2 and weight <= 6:
+  Gcost = 20 + 3*weight
+elif weight > 6 and weight <= 10:
+  Gcost = 20 + 4.00*weight
+elif weight > 10:
+  Gcost = 20 + 4.75*weight
+else:
+  print("I don't think you did this right")
+
+#premium ground shipping
+GPcost = 125
+
+#Drone Shipping 
+if weight <= 2:
+  Dcost = 4.5*weight
+elif weight > 2 and weight <= 6:
+  Dcost = 9*weight
+elif weight > 6 and weight <= 10:
+  Dcost = 12.00*weight
+elif weight > 10:
+  Dcost = 14.25*weight
+else:
+  print("I don't think you did this right")
+
+ShippingCosts = [Gcost,GPcost,Dcost]
+MintoMax = sorted(ShippingCosts)
+
+
+CheapestShipping = MintoMax[0]
+print(CheapestShipping)
+
+
+
